@@ -316,84 +316,84 @@ AOS.init({
         GALLERY FILTER
 =========================================*/
 
-const filterButtons = document.querySelectorAll(".filter-btn");
-const galleryItems = document.querySelectorAll(".gallery-item");
+// const filterButtons = document.querySelectorAll(".filter-btn");
+// const galleryItems = document.querySelectorAll(".gallery-item");
 
-filterButtons.forEach(button => {
+// filterButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+//     button.addEventListener("click", () => {
 
-        filterButtons.forEach(btn => btn.classList.remove("active"));
+//         filterButtons.forEach(btn => btn.classList.remove("active"));
 
-        button.classList.add("active");
+//         button.classList.add("active");
 
-        const filter = button.getAttribute("data-filter");
+//         const filter = button.getAttribute("data-filter");
 
-        galleryItems.forEach(item => {
+//         galleryItems.forEach(item => {
 
-            if (filter === "all" || item.classList.contains(filter)) {
+//             if (filter === "all" || item.classList.contains(filter)) {
 
-                item.style.display = "block";
+//                 item.style.display = "block";
 
-                setTimeout(() => {
+//                 setTimeout(() => {
 
-                    item.style.opacity = "1";
-                    item.style.transform = "scale(1)";
+//                     item.style.opacity = "1";
+//                     item.style.transform = "scale(1)";
 
-                },100);
+//                 },100);
 
-            } else {
+//             } else {
 
-                item.style.opacity = "0";
-                item.style.transform = "scale(.9)";
+//                 item.style.opacity = "0";
+//                 item.style.transform = "scale(.9)";
 
-                setTimeout(() => {
+//                 setTimeout(() => {
 
-                    item.style.display = "none";
+//                     item.style.display = "none";
 
-                },300);
+//                 },300);
 
-            }
+//             }
 
-        });
+//         });
 
-    });
+//     });
 
-});
+// });
 
 /*=========================================
         CREATE LIGHTBOX
 =========================================*/
 
-const lightbox = document.createElement("div");
+// const lightbox = document.createElement("div");
 
-lightbox.className = "gallery-lightbox";
+// lightbox.className = "gallery-lightbox";
 
-lightbox.innerHTML = `
+// lightbox.innerHTML = `
 
-<div class="lightbox-content">
+// <div class="lightbox-content">
 
-    <span class="close-lightbox">&times;</span>
+//     <span class="close-lightbox">&times;</span>
 
-    <img src="" alt="Gallery Image">
+//     <img src="" alt="Gallery Image">
 
-    <button class="prev-btn">&#10094;</button>
+//     <button class="prev-btn">&#10094;</button>
 
-    <button class="next-btn">&#10095;</button>
+//     <button class="next-btn">&#10095;</button>
 
-</div>
+// </div>
 
-`;
+// `;
 
-document.body.appendChild(lightbox);
+// document.body.appendChild(lightbox);
 
-const lightboxImage = lightbox.querySelector("img");
+// const lightboxImage = lightbox.querySelector("img");
 
-const closeBtn = lightbox.querySelector(".close-lightbox");
+// const closeBtn = lightbox.querySelector(".close-lightbox");
 
-const prevBtn = lightbox.querySelector(".prev-btn");
+// const prevBtn = lightbox.querySelector(".prev-btn");
 
-const nextBtn = lightbox.querySelector(".next-btn");
+// const nextBtn = lightbox.querySelector(".next-btn");
 
 /*=========================================
         IMAGE ARRAY
@@ -513,29 +513,29 @@ lightbox.addEventListener("click",(e)=>{
             FAQ ACCORDION
 =========================================*/
 
-const faqItems = document.querySelectorAll(".faq-item");
+// const faqItems = document.querySelectorAll(".faq-item");
 
-faqItems.forEach((item) => {
+// faqItems.forEach((item) => {
 
-    const question = item.querySelector(".faq-question");
+//     const question = item.querySelector(".faq-question");
 
-    question.addEventListener("click", () => {
+//     question.addEventListener("click", () => {
 
-        faqItems.forEach((faq) => {
+//         faqItems.forEach((faq) => {
 
-            if (faq !== item) {
+//             if (faq !== item) {
 
-                faq.classList.remove("active");
+//                 faq.classList.remove("active");
 
-            }
+//             }
 
-        });
+//         });
 
-        item.classList.toggle("active");
+//         item.classList.toggle("active");
 
-    });
+//     });
 
-});
+// });
 
 
 
