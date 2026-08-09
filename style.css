@@ -983,7 +983,7 @@ bottom: 60px !important;
 
 .whatsapp-btn{
 
-    background:#075E54 !important;
+    background:#25D366 !important;
     color:rgb(255, 255, 255) !important;
 
     animation:whatsappBlink 2.2s infinite;
@@ -8236,15 +8236,13 @@ height:80px;
 /*=========================================
 WHY CHOOSE US - SMALL MOBILE
 =========================================*/
-@media (max-width:480px){
+/* @media (max-width:480px){
 
-/* Image */
 .why-image img{
     height:200px !important;
     border-radius:18px !important;
 }
 
-/* Floating Installation Card */
 .floating-card{
     padding:10px 14px !important;
     bottom:10px !important;
@@ -8259,7 +8257,6 @@ WHY CHOOSE US - SMALL MOBILE
     font-size:11px !important;
 }
 
-/* Feature Cards */
 .feature-card{
     padding:14px !important;
     border-radius:16px !important;
@@ -8281,8 +8278,60 @@ WHY CHOOSE US - SMALL MOBILE
     line-height:1.6 !important;
 }
 
-}
+} */
 
+
+@media (max-width:480px){
+
+    .why-image img{
+        height:280px !important;
+        border-radius:18px !important;
+    }
+
+
+    .floating-card{
+        padding:10px 14px !important;
+        bottom:10px !important;
+        left:10px !important;
+    }
+
+
+    .floating-card h2{
+        font-size:20px !important;
+    }
+
+
+    .floating-card p{
+        font-size:11px !important;
+    }
+
+
+    .feature-card{
+        padding:14px !important;
+        border-radius:16px !important;
+        margin-bottom:12px !important;
+    }
+
+
+    .number{
+        width:46px !important;
+        height:46px !important;
+        font-size:16px !important;
+    }
+
+
+    .feature-text h3{
+        font-size:18px !important;
+    }
+
+
+    .feature-text p{
+        font-size:13px !important;
+        line-height:1.6 !important;
+    }
+
+
+}
 
 
 
