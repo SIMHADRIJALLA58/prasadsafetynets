@@ -809,3 +809,39 @@ Prasad Safety Nets Website`;
 
 
 
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const backToTop = document.getElementById("backToTop");
+
+    /* Show arrow when scrolling */
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 150) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+
+    });
+
+    /* Click arrow */
+    backToTop.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+});
+

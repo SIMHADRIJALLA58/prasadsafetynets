@@ -8527,3 +8527,77 @@ WHY CHOOSE US - SMALL MOBILE
 
 
 
+/* =========================================
+   BACK TO TOP BUTTON
+========================================= */
+
+.back-to-top {
+    position: fixed;
+
+    /* SAME RIGHT POSITION AS WHATSAPP + CALL */
+    right: 20px;
+    bottom: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #7ebcde;
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+
+    z-index: 99999;
+}
+
+
+/* SHOW */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* HOVER */
+.back-to-top:hover {
+    background: #0d87c9;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .back-to-top {
+        right: 26px;;
+        bottom: 6px;
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 16px;
+    }
+
+}

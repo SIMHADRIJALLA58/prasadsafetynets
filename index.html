@@ -70,7 +70,8 @@
     <!-- Swiper Slider -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- AOS Animation -->
     <link rel="stylesheet"
           href="https://unpkg.com/aos@2.3.4/dist/aos.css">
@@ -2514,6 +2515,43 @@ Send Enquiry
         easing: "ease-in-out"
     });
 </script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const backToTop = document.getElementById("backToTop");
+
+    /* Show arrow when scrolling */
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 150) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+
+    });
+
+    /* Click arrow */
+    backToTop.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+});
+
+</script>
+<!-- ==============================
+     BACK TO TOP BUTTON
+================================= -->
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    ↑
+</button>
 <!-- ========================================= -->
 <!-- HEADER END -->
 <!-- ========================================= --></body>
