@@ -752,3 +752,34 @@ Prasad Safety Nets Website`;
 
 
 
+/* =========================================
+   MOBILE DROPDOWN CLICK FIX
+========================================= */
+
+document.querySelectorAll('.dropdown > a').forEach(function(dropdownLink) {
+
+    dropdownLink.addEventListener('click', function(e) {
+
+        // Mobile only
+        if (window.innerWidth <= 992) {
+
+            e.preventDefault();
+
+            const dropdown = this.parentElement;
+
+            // Close other dropdowns
+            document.querySelectorAll('.dropdown').forEach(function(item) {
+
+                if (item !== dropdown) {
+                    item.classList.remove('active');
+                }
+
+            });
+
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+        }
+
+    });
+
+});
