@@ -24,13 +24,70 @@ menuToggle.addEventListener("click", () => {
   CLOSE MENU WHEN CLICKING LINKS
 =========================================*/
 
+// const navLinks = document.querySelectorAll(".nav-links a");
+
+// navLinks.forEach(link => {
+//     link.addEventListener("click", () => {
+//         navbar.classList.remove("active");
+//         menuToggle.classList.remove("active");
+//     });
+// });
+
+
+/*=========================================
+  CLOSE MENU WHEN CLICKING NORMAL LINKS
+=========================================*/
+
 const navLinks = document.querySelectorAll(".nav-links a");
 
 navLinks.forEach(link => {
-    link.addEventListener("click", () => {
+
+    link.addEventListener("click", (e) => {
+
+        /* Don't close menu for dropdown buttons */
+        if (link.parentElement.classList.contains("dropdown")) {
+            return;
+        }
+
         navbar.classList.remove("active");
         menuToggle.classList.remove("active");
+
     });
+
+});
+
+
+/*=========================================
+  MOBILE DROPDOWNS
+=========================================*/
+
+document.querySelectorAll(".dropdown > a").forEach(dropdownLink => {
+
+    dropdownLink.addEventListener("click", function(e) {
+
+        if (window.innerWidth <= 992) {
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            const dropdown = this.parentElement;
+
+            /* Close other dropdowns */
+            document.querySelectorAll(".dropdown").forEach(item => {
+
+                if (item !== dropdown) {
+                    item.classList.remove("active");
+                }
+
+            });
+
+            /* Open / close current dropdown */
+            dropdown.classList.toggle("active");
+
+        }
+
+    });
+
 });
 
 /*=========================================
@@ -752,34 +809,3 @@ Prasad Safety Nets Website`;
 
 
 
-/* =========================================
-   MOBILE DROPDOWN CLICK FIX
-========================================= */
-
-document.querySelectorAll('.dropdown > a').forEach(function(dropdownLink) {
-
-    dropdownLink.addEventListener('click', function(e) {
-
-        // Mobile only
-        if (window.innerWidth <= 992) {
-
-            e.preventDefault();
-
-            const dropdown = this.parentElement;
-
-            // Close other dropdowns
-            document.querySelectorAll('.dropdown').forEach(function(item) {
-
-                if (item !== dropdown) {
-                    item.classList.remove('active');
-                }
-
-            });
-
-            // Toggle current dropdown
-            dropdown.classList.toggle('active');
-        }
-
-    });
-
-});
