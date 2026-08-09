@@ -8527,28 +8527,3 @@ WHY CHOOSE US - SMALL MOBILE
 
 
 
-/* =========================================
-   MOBILE DROPDOWN FIX
-========================================= */
-
-@media (max-width:992px){
-
-    .dropdown:hover .dropdown-menu{
-        display:none !important;
-    }
-
-    .dropdown.active > .dropdown-menu{
-        display:block !important;
-        opacity:1 !important;
-        visibility:visible !important;
-        transform:none !important;
-        pointer-events:auto !important;
-    }
-
-    .dropdown-menu{
-        position:static !important;
-        width:100% !important;
-        margin-top:4px !important;
-    }
-
-}
